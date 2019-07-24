@@ -1,3 +1,6 @@
+#ifndef HQRP_BUBBLE_SORT_HPP
+#define HQRP_BUBBLE_SORT_HPP
+
 #include <algorithm>
 #include <functional>
 #include <iostream>
@@ -83,3 +86,5 @@ namespace hqrp {
   }
 
 }  // namespace hqrp
+
+#endif
