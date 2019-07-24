@@ -30,13 +30,13 @@ namespace hqrp {
 
     const auto count = std::distance(begin, end);
     auto already_sorted = false;
-    for (auto i = 0; i < count - 1; ++i) {
+    for (auto i = 0; i + 1 < count; ++i) {
       if (already_sorted) {
         break;
       }
       already_sorted = true;
       auto it = begin;
-      for (auto nested_i = 0; nested_i < count - 1 - i; ++nested_i) {
+      for (auto nested_i = 0; nested_i + 1 + i < count; ++nested_i) {
         const auto next_it = std::next(it);
         if (!(*it < *next_it)) {
           std::iter_swap(it, next_it);
@@ -65,13 +65,13 @@ namespace hqrp {
 
     const auto count = std::distance(begin, end);
     auto already_sorted = false;
-    for (auto i = 0; i < count - 1; ++i) {
+    for (auto i = 0; i + 1 < count; ++i) {
       if (already_sorted) {
         break;
       }
       already_sorted = true;
       auto it = begin;
-      for (auto nested_i = 0; nested_i < count - 1 - i; ++nested_i) {
+      for (auto nested_i = 0; nested_i + 1 + i < count; ++nested_i) {
         const auto next_it = std::next(it);
         if (!comparator(*it, *next_it)) {
           std::iter_swap(it, next_it);
